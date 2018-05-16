@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_select_specialities"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_hint"
+    android:orientation="vertical"
+    tools:context=".SelectSpecialities">
+    <LinearLayout
+        android:id="@+id/ll_search1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/margin_10"
+        android:background="@drawable/search_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_5">
+
+        <EditText
+            android:id="@+id/ed_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/search_icon1"
+            android:drawablePadding="@dimen/margin_10"
+            android:hint="@string/search"
+            android:padding="@dimen/margin_5"
+            android:textSize="@dimen/text_size_very_small_12" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+    <LinearLayout
+        android:id="@+id/llSpecialities"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/specialists_small"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_gravity="center_vertical"
+            android:text="@string/speciality"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_medium" />
+
+            </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/light_hint" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvsearchSelectSpeciality"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:elevation="8dp" />
+    </LinearLayout>
+        </LinearLayout>
+    <TextView
+        android:id="@+id/tvNoDataFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/no_data"
+        android:textColor="@color/hintcolor"
+        android:textSize="@dimen/text_size_small"
+        android:visibility="gone"/>
+
+</LinearLayout>
+
+
+

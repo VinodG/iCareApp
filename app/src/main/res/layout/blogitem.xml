@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/card"
+    android:layout_centerHorizontal="true"
+    android:layout_height="wrap_content">
+
+  <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/blogimage2"
+      android:layout_centerHorizontal="true"
+      android:id="@+id/iv_blogitem"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Glaucoma"
+        android:textStyle="bold"
+        android:textSize="19sp"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/tv_blogitem"
+        android:layout_below="@+id/iv_blogitem"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Have you ever\nhad to lose\nbadly would lkd"
+        android:layout_below="@+id/tv_blogitem"
+        android:lineSpacingExtra="1dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/textView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="65dp"
+        android:src="@drawable/arrow_blog"
+        android:layout_marginRight="25dp"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:id="@+id/imageView" />
+
+</RelativeLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/bgcolor"
+    tools:context=".BaseActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/baseFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/llBase"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/toolbar"
+                    layout="@layout/tool_bar" />
+
+                <LinearLayout
+                    android:id="@+id/llBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#eeeeee"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+          <!--  <ImageView
+                android:id="@+id/ivFirstTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/first_time_dashboard"
+                android:scaleType="fitXY"
+                android:visibility="gone" />-->
+            <!--<android.support.design.widget.FloatingActionButton
+                android:id="@+id/faButoon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:elevation="0dp"
+                android:src="@drawable/dir"
+                android:layout_margin="16dp"
+                app:backgroundTint="@color/green"
+                app:borderWidth="0dp"/>-->
+            <ImageView
+                android:id="@+id/iv_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:layout_marginBottom="@dimen/margin_30"
+                android:layout_marginRight="@dimen/text_size_small_16"
+                android:src="@drawable/fab_plus"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/llForCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="@dimen/margin_30"
+                android:layout_marginRight="@dimen/text_size_small_16"
+                android:background="@drawable/call_screen"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivfiltered_xy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:src="@drawable/close_call" />
+
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginLeft="-64dp"
+            android:alpha=".9"
+            android:background="@drawable/drawerbg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <include layout="@layout/drawer_header" />
+
+                <ListView
+                    android:id="@+id/left_drawer"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_weight=".9"
+                    android:choiceMode="singleChoice"
+                    android:divider="@null"/>
+
+                <!--  <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_weight=".1">-->
+                <ImageView
+                    android:id="@+id/icareContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_weight=".1"
+                    android:src="@drawable/cal_icare"/>
+
+
+                <!--</RelativeLayout>-->
+            </LinearLayout>
+
+        </FrameLayout>
+        <!--  <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginLeft="-64dp"
+            android:background="@drawable/drawerbg">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+                <include layout="@layout/drawer_header"/>
+                <ListView
+                    android:id="@+id/left_drawer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:choiceMode="singleChoice"
+                    android:divider="@null" />
+            </LinearLayout>
+           <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/cal_icare" />
+       </RelativeLayout>-->
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</LinearLayout>

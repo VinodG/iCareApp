@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lldoctorFragment"
+    android:background="@drawable/card1"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15" >
+
+        <ScrollView
+            android:layout_above="@+id/llNames"
+            android:id="@+id/scrollViewDoctorsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8"
+                android:ellipsize="end"
+                android:lineSpacingMultiplier="1.5"
+                android:minLines="1"
+                android:text="tvAboutDoctor"
+                android:textSize="@dimen/text_size_very_small_12" />
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llNames"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="@dimen/margin_20"
+            android:gravity="right|center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="- "
+                    android:textColor="@color/dark_blue2"
+                    android:textSize="@dimen/tv_doctors_card__small"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="Name"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:textColor="@color/dark_blue2"
+                    android:textSize="@dimen/tv_doctors_card__small"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvDates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:text="date"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginRight="@dimen/margin_20"
+                android:textColor="@color/dark_blue2"
+                android:textSize="@dimen/tv_doctors_card__small" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+
+
+

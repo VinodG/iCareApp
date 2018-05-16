@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_reminder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/medicine_name"
+            android:id="@+id/tvMedicineHeader"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:textSize="@dimen/text_size_very_small_14"
+            android:padding="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_8" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/etMedicineName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""
+                android:hint="@string/enter_medicine"
+                android:background="@null"
+                android:textSize="@dimen/text_size_very_small_14"
+                android:singleLine="true"
+                android:padding="@dimen/margin_5"
+                android:textColor="@color/statusbarblue"
+                android:layout_marginLeft="@dimen/margin_15"
+                />
+            <ImageView
+                android:id="@+id/ivClear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:src="@drawable/close_specialist"
+                android:padding="@dimen/margin_10"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/dose"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_15"
+                    android:textSize="@dimen/text_size_very_small_14"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QTY:  "
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/text_size_very_small_14"
+                    android:layout_marginRight="@dimen/margin_10"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:padding="@dimen/margin_8"
+                    android:src="@drawable/minus_icon"
+                    android:id="@+id/ivSubtractCapsules"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:id="@+id/numOfCapsules"
+                    android:text="1"
+                    android:textSize="@dimen/text_size_very_small_14"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/plus_icon"
+                    android:padding="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:id="@+id/ivAddCapsules"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/margin_8">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ivSelecttedTablets"
+                    android:layout_weight="1"
+                    android:padding="@dimen/margin_3"
+                    android:src="@drawable/select_tablets" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/margin_3"
+                    android:id="@+id/ivunSelecttedCapsules"
+                    android:src="@drawable/unselect_capsules"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/margin_3"
+                    android:id="@+id/ivunSelecttedDroplets"
+                    android:src="@drawable/unselect_droplet"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ivunSelecttedInjection"
+                    android:layout_weight="1"
+                    android:padding="@dimen/margin_3"
+                    android:src="@drawable/unselect_injection" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8">
+
+        <LinearLayout
+            android:id="@+id/llTimings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5">
+
+                <TextView
+                    android:id="@+id/tvTimings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_15"
+                    android:layout_weight="1"
+                    android:text="Frequency"
+                    android:textSize="@dimen/text_size_very_small_14"/>
+
+                <TextView
+                    android:id="@+id/tvNumberOfTimings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_15"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Once a day"
+                    android:textColor="@color/dark_blue2"
+                    android:textSize="@dimen/text_size_very_small_14" />
+
+                <ImageView
+                    android:id="@+id/ivEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:padding="@dimen/margin_5"
+                    android:src="@drawable/edit_gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_8">
+
+                <TextView
+                    android:id="@+id/tvMedicineTime1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:background="#08449b"
+                    android:drawablePadding="@dimen/margin_5"
+                    android:drawableRight="@drawable/edit_white"
+                    android:padding="@dimen/margin_3"
+                    android:text="8:00  AM"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_very_small_12" />
+
+                <TextView
+                    android:id="@+id/tvMedicineTime2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:background="#08449b"
+                    android:drawablePadding="@dimen/margin_5"
+                    android:drawableRight="@drawable/edit_white"
+                    android:padding="@dimen/margin_3"
+                    android:text="8:30  AM"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_very_small_12"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvMedicineTime3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:background="#08449b"
+                    android:drawablePadding="@dimen/margin_5"
+                    android:drawableRight="@drawable/edit_white"
+                    android:padding="@dimen/margin_3"
+                    android:text="8:30  AM"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_very_small_12"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_8">
+
+                <TextView
+                    android:id="@+id/tvMedicineTime4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:background="#08449b"
+                    android:drawablePadding="@dimen/margin_5"
+                    android:drawableRight="@drawable/edit_white"
+                    android:padding="@dimen/margin_3"
+                    android:text="8:30  AM"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_very_small_12"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvMedicineTime5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:background="#08449b"
+                    android:drawablePadding="@dimen/margin_5"
+                    android:drawableRight="@drawable/edit_white"
+                    android:padding="@dimen/margin_3"
+                    android:text="8:30  AM"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_very_small_12"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llDays"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@id/llDays"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Days"
+                    android:layout_marginLeft="@dimen/margin_15"
+                    android:textSize="@dimen/text_size_very_small_14"
+                    android:layout_marginTop="@dimen/margin_10"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Everyday"
+                    android:textColor="@color/dark_blue2"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_15"
+                    android:id="@+id/tvDaysTotal"
+                    android:textSize="@dimen/text_size_very_small_14"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:src="@drawable/edit_gray"
+                android:id="@+id/ivDayslist"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llMonths"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Duration"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_10"
+                android:textSize="@dimen/text_size_very_small_14"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="1 day"
+                android:textColor="@color/dark_blue2"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:textSize="@dimen/text_size_very_small_14"
+                android:id="@+id/tvMonthDuration"/>
+
+            <SeekBar
+                android:id="@+id/seekBarMonth"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:thumb="@drawable/cir_cal"
+                android:progress="10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:max="30"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:layout_marginRight="@dimen/margin_10">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 day"
+                    android:layout_weight="1"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/text_size_very_small_14"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30 days"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/text_size_very_small_14"/>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/lldoctorFragment"
+        android:background="@drawable/card"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0.40"
+            android:layout_marginRight="-10dp"
+            android:layout_marginLeft="-4dp"
+            android:background="@drawable/doctor_bg_detail"
+            android:gravity="center|bottom"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivDoctorBigImage"
+                android:layout_width="220dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@color/tab_green" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.60"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_10"
+            android:paddingLeft="@dimen/margin_15"
+            android:paddingRight="@dimen/margin_15"
+            android:paddingTop="@dimen/margin_5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDoctorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DoctorName"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:textColor="@color/dark_blue2"
+                    android:textSize="@dimen/text_size_small_16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDoctorQualification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:text="tvDoctorQualification"
+                    android:textSize="@dimen/tv_doctors_card__small"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDoctorLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:text="tvDoctorLocation"
+                    android:textSize="@dimen/text_size_very_small"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+                 <ScrollView
+                     android:layout_above="@+id/llViewDetails"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:id="@+id/scrollViewDoctorsFragment">
+                     <TextView
+                         android:id="@+id/tvAboutDoctor"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="@dimen/margin_5"
+                         android:ellipsize="end"
+                         android:maxLines="4"
+                         android:lineSpacingMultiplier="1.5"
+                         android:minLines="1"
+                         android:text="tvAboutDoctor"
+                         android:textSize="@dimen/text_size_very_small_12" />
+                 </ScrollView>
+
+                 <LinearLayout
+                     android:id="@+id/llViewDetails"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="right|center"
+                     android:layout_alignParentBottom="true"
+                     android:orientation="horizontal"
+                     android:padding="@dimen/margin_10">
+
+                     <TextView
+                         android:id="@+id/tvViewDetails"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="right"
+                         android:text="VIEW DETAILS"
+                         android:textColor="@color/dark_blue2"
+                         android:textSize="@dimen/tv_doctors_card__small"
+                         android:textStyle="bold" />
+                 </LinearLayout>
+             </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

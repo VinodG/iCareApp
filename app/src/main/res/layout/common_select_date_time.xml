@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_20"
+                android:text="@string/select_date"
+                android:textAllCaps="true"
+                android:textSize="@dimen/text_size_small_16" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tab_date_bg"
+                android:layout_marginTop="@dimen/margin_10"
+                app:tabIndicatorColor="@color/green"
+                app:tabMode="scrollable"
+                />
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/morningTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/morning_select"
+                    android:text="@string/morning"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/afternoonTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:background="@drawable/afternoon_unselect"
+                    android:text="@string/Afternoon"
+                    android:textColor="@color/black_light" />
+
+                <Button
+                    android:id="@+id/eveningTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/evening_unselect"
+                    android:text="@string/Evening"
+                    android:textColor="@color/black_light" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/select_time"
+                android:textAllCaps="true"
+                android:textSize="@dimen/text_size_small_16" />
+            <GridView
+                android:id="@+id/gridViewTime"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/grid_hieght"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:choiceMode="singleChoice"
+                android:clickable="true"
+                android:layout_marginTop="@dimen/margin_10"
+                android:drawSelectorOnTop="false"
+                android:focusable="true"
+                android:gravity="center"
+                android:numColumns="4"
+                android:orientation="horizontal"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_10">
+
+        <TextView
+            android:id="@+id/tvConfirmDateTime"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="07:00 AM" />
+
+        <Button
+            android:id="@+id/btnProceed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/proceed"
+            android:text="Done"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>
+<!--
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_above="@id/bottomConfirm"
+android:fillViewport="true"
+android:scrollbars="none"
+android:layout_below="@+id/llImage">
+</ScrollView>
+-->

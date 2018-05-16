@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context="com.winit.icare.com.icare_clinics.app.AboutUsActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/ivAboutIcare"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"/>
+
+            <!--  <com.icare_clinics.app.AutoScrollViewpager
+                  android:id="@+id/vp_pager"
+                  android:layout_alignParentTop="true"
+                  android:layout_width="match_parent"
+                  android:layout_height="180dp" />
+
+              <com.viewpagerindicator.CirclePageIndicator
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="165dp"
+                  app:fillColor="@color/white"
+                  app:radius="3dp"
+                  app:strokeColor="#ffffff"
+                  android:id="@+id/circle_pagein"/>-->
+            <!--  app:fillColor="#425569"-->
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="iCare Clinics - Dubai Healthcare Center"
+                    android:textColor="#1252a0"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/margin_30"
+                    android:layout_marginBottom="@dimen/margin_10"/>
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="@color/sky_blue"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/margin_20"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <!--  <ImageView
+                          android:layout_marginTop="@dimen/margin_30"
+                          android:layout_marginBottom="@dimen/margin_30"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:src="@drawable/back_bottle"
+                          android:layout_centerHorizontal="true"
+                          android:layout_centerVertical="true"/>-->
+                    <WebView
+                        android:id="@+id/webview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        android:background="@null"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/margin_8">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/watermark"
+                        android:layout_marginTop="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvabout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/abouticare1"
+                            android:paddingLeft="@dimen/margin_10"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="1.5"
+                            android:layout_marginBottom="@dimen/margin_18"/>
+
+                        <TextView
+                            android:id="@+id/tvabout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/abouicare2"
+                            android:padding="@dimen/margin_10"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="1.5"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

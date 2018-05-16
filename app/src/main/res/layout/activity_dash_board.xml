@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/margin_57"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <RelativeLayout
+                    android:id="@+id/vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <com.icare_clinics.app.AutoScrollViewpager
+                        android:id="@+id/vp_dashboard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never" />
+
+                    <com.viewpagerindicator.CirclePageIndicator
+                        android:id="@+id/vp_dashboard_circle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/margin_30"
+                        android:padding="@dimen/margin_20"
+                        app:fillColor="#005aab"
+                        app:radius="@dimen/margin_3"
+                        app:strokeColor="#005aab" />
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_10"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:background="#ffffff" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ll_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_doctors"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/margin_20"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/llDoctors"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/iv_doctors"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/doctors" />
+
+                                <TextView
+                                    android:id="@+id/tv_doctors"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/margin_10"
+                                    android:text="@string/doctors_caps"
+                                    android:textColor="@color/dashboard_text_clr"
+                                    android:textSize="@dimen/text_size_very_small_14" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llClinics"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/iv_clinics"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/clinics" />
+
+                                <TextView
+                                    android:id="@+id/tv_clinics"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/margin_10"
+                                    android:text="@string/clinics_caps"
+                                    android:textColor="@color/dashboard_text_clr"
+                                    android:textSize="@dimen/text_size_very_small_14" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_clinics"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/margin_40"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/llSpecialities"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/iv_specialists"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/specalities" />
+
+                                <TextView
+                                    android:id="@+id/tv_specialties"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/margin_10"
+                                    android:text="@string/specialities_caps"
+                                    android:textColor="@color/dashboard_text_clr"
+                                    android:textSize="@dimen/text_size_very_small_14" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lloffers"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/iv_offers"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/news" />
+
+                                <TextView
+                                    android:id="@+id/tv_offers"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/margin_10"
+                                    android:text="WHAT'S NEW"
+                                    android:textColor="@color/dashboard_text_clr"
+                                    android:textSize="@dimen/text_size_very_small_14" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/margin_20"
+                            android:layout_marginTop="@dimen/margin_45"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/llhealthpackages"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/iv_healthpackages"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/packages" />
+
+                                <TextView
+                                    android:id="@+id/tv_healthpackages"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/margin_10"
+                                    android:text="@string/health_packages_caps"
+                                    android:textColor="@color/dashboard_text_clr"
+                                    android:textSize="@dimen/text_size_very_small_14" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llMedicineReminder"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/iv_medicineReminder"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/remainder" />
+
+                                <TextView
+                                    android:id="@+id/tv_medicineReminder"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/margin_10"
+                                    android:text="@string/medicine_reminder_caps"
+                                    android:textColor="@color/dashboard_text_clr"
+                                    android:textSize="@dimen/text_size_very_small_14" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/margin_50"
+                            android:layout_marginTop="@dimen/margin_20"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/llhealthTracker"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/iv_healthTracker"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/health_tracker" />
+
+                                <TextView
+                                    android:id="@+id/tv_healthTracker"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/margin_10"
+                                    android:text="@string/health_tracker_caps"
+                                    android:textColor="@color/dashboard_text_clr"
+                                    android:textSize="@dimen/text_size_very_small_14" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lltestmonial"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/iv_testmonial"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/testimonial" />
+
+                                <TextView
+                                    android:id="@+id/tv_testmonial"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/margin_10"
+                                    android:text="@string/testmonials_caps"
+                                    android:textColor="@color/dashboard_text_clr"
+                                    android:textSize="@dimen/text_size_very_small_14" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_plaus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_90"
+                        android:alpha="0.2"
+                        android:src="@drawable/plaus" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:alpha="0.2"
+                        android:src="@drawable/plaus"
+                        android:layout_below="@+id/iv_plaus"
+                        android:layout_alignLeft="@+id/iv_plaus"
+                        android:layout_alignStart="@+id/iv_plaus"
+                        android:id="@+id/imageView2" />
+
+                    <ImageView
+                        android:layout_below="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:layout_alignLeft="@+id/imageView2"
+                        android:layout_alignStart="@+id/imageView2"
+                        android:src="@drawable/plaus"
+                        android:alpha="0.2"
+                        android:layout_alignRight="@+id/imageView2"
+                        android:layout_alignEnd="@+id/imageView2" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/search_bg1"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_3"
+            android:orientation="horizontal"
+            app:layout_anchor="@id/ll_doctors"
+            app:layout_anchorGravity="top|center_horizontal"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:hint="@string/search_by_dr"
+                android:textSize="@dimen/text_size_very_small_12" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:src="@drawable/search_icon1" />
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_10">
+
+        <ImageView
+            android:id="@+id/iv_fab_appoint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:src="@drawable/fab_new" />
+        <ImageView
+            android:id="@+id/iv_fab_call"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/margin_15"
+            android:src="@drawable/button_call" />
+    </LinearLayout>
+</RelativeLayout>

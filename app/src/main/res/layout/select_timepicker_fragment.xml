@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:padding="@dimen/margin_5"
+        android:gravity="center"
+        android:id="@+id/tvCancel"
+        android:textSize="@dimen/text_size_large_22"
+        android:layout_weight="1"
+        android:textColor="@color/bright_blue"/>
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="@dimen/text_size_large_22"
+        android:padding="@dimen/margin_5"
+        android:text="Set intake time"
+        android:gravity="center"
+
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:id="@+id/tvDone"
+        android:layout_weight="1"
+        android:textSize="@dimen/text_size_large_22"
+        android:gravity="center"
+        android:padding="@dimen/margin_5"
+        android:textColor="@color/bright_blue"/>
+
+</LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:background="@color/gray"/>
+    <TimePicker
+        android:id="@+id/timePicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:timePickerMode="spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="time"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/text_size_large_22"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/time"/>
+<!--<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/set_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+       android:layout_marginBottom="@dimen/margin_3"
+        android:background="@drawable/proceed"
+        android:textColor="@color/white"
+        android:onClick="setTime"
+        android:text="Done" />
+</LinearLayout>-->
+</LinearLayout>

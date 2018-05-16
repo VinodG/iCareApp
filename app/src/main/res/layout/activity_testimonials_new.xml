@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".TestimonialsActivityNew"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+<!--<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.icare_clinics.app.TestimonialsActivityNew">-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/doctorsbg"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/headerheight"
+                    android:background="@android:color/transparent"
+                    android:layout_margin="@dimen/margin_10"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ivBackImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_5"
+                        android:layout_marginLeft="@dimen/margin_8"
+                        android:src="@drawable/menu_white" />
+
+                    <TextView
+                        android:id="@+id/tvtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/testimonials"
+                        android:gravity="center"
+                        android:textSize="@dimen/text_size_normal"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_5"
+                        android:src="@drawable/search"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/ivFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_5"
+                        android:src="@drawable/filter"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.75"
+                    android:gravity="center"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"/>
+
+
+                <!-- <ImageView
+                     android:id="@+id/iv_fab"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/dir"
+                     android:layout_gravity="right"/>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvNumOfPages"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="@dimen/tvViewPagerStatusInDoctorActivity" />
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tablayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:paddingBottom="@dimen/margin_5"
+                        android:paddingTop="@dimen/margin_5"
+                        app:tabMode="scrollable"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        app:tabPaddingBottom="@dimen/margin_5"
+                        android:visibility="gone"/>
+
+                    <com.viewpagerindicator.CirclePageIndicator
+                        android:id="@+id/vp_dashboard_circle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/margin_30"
+                        android:padding="@dimen/margin_20"
+                        app:fillColor="#005aab"
+                        app:radius="3dp"
+                        app:strokeColor="#005aab"
+                        android:visibility="gone"/>
+
+                    <!--<LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="fill_parent"
+                            android:src="@mipmap/docto1"/>
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="fill_parent"
+                            android:src="@mipmap/docto2"/>
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="fill_parent"
+                            android:src="@mipmap/docto3"/>
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="fill_parent"
+                            android:src="@mipmap/docto4"/>
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="fill_parent"
+                            android:src="@mipmap/docto5"/>
+                    </LinearLayout>-->
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>
+<!--</android.support.constraint.ConstraintLayout>-->

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0.9"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:id="@+id/tvMedicineName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abarelix 50 mg"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/tvDosage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 Tablet"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+       <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:src="@drawable/delete"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="8dp">
+        <TextView
+            android:id="@+id/tvDays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Every Day"
+            android:textSize="16sp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/vertical_reminder"
+            android:layout_margin="8dp"/>
+        <TextView
+            android:id="@+id/tvTimings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9:30AM,12:30PM,6:30PM"
+            android:textSize="16sp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/vertical_reminder"
+            android:layout_margin="8dp"/>
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 Month"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <RelativeLayout
+            android:id="@+id/rlHospital"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="left|bottom">
+            <ImageView
+                android:id="@+id/iv_clinics"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/img1"
+                android:scaleType="fitXY"
+                android:alpha=".8"/>
+            <ImageView
+                android:id="@+id/iv_clinics_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#66000000"
+                android:scaleType="fitXY"
+                android:alpha=".8"/>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="one "
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvWeekEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="one "
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/tvWorkingDays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="one "
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llClinicToobar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_15">
+
+        </LinearLayout>
+        <!--  <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              >
+              <ImageView
+                  android:id="@+id/ivBack"
+                  android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:layout_height="wrap_content"
+                  android:src="@mipmap/ic_launcher"/>
+              <TextView
+                  android:id="@+id/tvHplName"
+                  android:textStyle="bold"
+                  android:textColor="@android:color/white"
+                  android:layout_height="fill_parent"
+                  android:layout_width="0dp"
+                  android:layout_weight="6"
+                  android:gravity="center_vertical|center"
+                  android:text="Clinic"/>
+              <ImageView
+                  android:id="@+id/ivDire"
+                  android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:layout_height="wrap_content"
+                  android:src="@mipmap/ic_launcher"/>
+          </LinearLayout>-->
+
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        style="@style/AppTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="#D3D3D3"
+        app:tabTextAppearance="@style/AppTabTextAppearance">
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+
+</LinearLayout>

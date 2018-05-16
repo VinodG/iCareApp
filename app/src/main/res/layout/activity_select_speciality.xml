@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_select_speciality"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".SelectSpeciality">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchSpeciality"
+        android:layout_margin="@dimen/margin_10"
+        android:hint="search"
+        android:drawablePadding="@dimen/margin_5"
+        android:drawableLeft="@drawable/search_icon"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listSpeciality">
+
+    </ListView>
+
+</LinearLayout>

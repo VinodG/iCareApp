@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_search1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/margin_10"
+        android:background="@drawable/search_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_5">
+
+        <EditText
+            android:id="@+id/ed_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/search_icon1"
+            android:drawablePadding="@dimen/margin_10"
+            android:hint="@string/search"
+            android:padding="@dimen/margin_5"
+            android:textSize="@dimen/text_size_small_16" />
+
+    </LinearLayout>
+
+    <view class="com.icare_clinics.app.PinnedHeaderExpListView"
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

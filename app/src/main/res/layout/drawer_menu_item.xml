@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_8"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_2"
+        android:layout_marginTop="@dimen/margin_2"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/drawerIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:src="@drawable/home" />
+
+        <TextView
+            android:id="@+id/drawerTitles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_30"
+            android:text="Home"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_very_small_14" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginRight="@dimen/margin_15"
+        android:layout_marginTop="@dimen/margin_8"
+        android:background="@drawable/sep_menu_i" />
+</LinearLayout>
+

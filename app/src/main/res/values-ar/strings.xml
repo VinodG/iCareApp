@@ -1,0 +1,77 @@
+<resources>
+
+    <string-array name="drawer_menu_titles">
+        <item>My Profile</item>
+        <item>Order Now</item>
+        <item>My Orders</item>
+        <item>My Recurring Orders</item>
+        <!--<item>Mai Coupons</item>-->
+        <!--<item>Gallery</item>-->
+        <item>Settings</item>
+        <item>Social Network</item>
+        <!--<item>Chat</item>-->
+        <item>About us</item>
+        <item>Contact us</item>
+        <!--<item>Media Center</item>-->
+        <item>Hydration Meter</item>
+        <item>Feedback</item>
+        <item>Upcoming Deliveries</item>
+        <item>Sync</item>
+        <!--<item>Game</item>-->
+        <!--<item>Logout</item>-->
+    </string-array>
+
+    <integer-array name="drawer_menu_icons">
+        <item>@drawable/myprofile_icon</item>
+        <item>@drawable/order_now_icon</item>
+        <item>@drawable/history_icon</item>
+        <item>@drawable/recurringorder_icon</item>
+        <!--<item>@drawable/mycoupons_icon</item>-->
+        <!-- <item>@drawable/gallery_icon</item>-->
+        <item>@drawable/settings_icon</item>
+        <item>@drawable/socialnetwork_icon</item>
+        <!--<item>@drawable/chat_icon</item>-->
+        <item>@drawable/aboutus_icon</item>
+        <item>@drawable/contactus_icon</item>
+        <!--<item>@drawable/media_icon</item>-->
+        <item>@drawable/feedback_icon</item>
+        <!--<item>@drawable/water_game_icon</item>-->
+        <item>@drawable/sync</item>
+        <!--<item>@drawable/logout_icon</item>-->
+    </integer-array>
+
+    <string name="english"> الانجليزية</string>
+    <string name="english1">English</string>
+    <string name="arabic">العربية</string>
+    <string name="on">إستلام</string>
+    <string name="off">إيقاف</string>
+    <string name="Saturday">السبت</string>
+    <string name="Sunday">الأحد</string>
+    <string name="Monday">الاثنين</string>
+    <string name="Tuesday">الثلاثاء</string>
+    <string name="Wednesday">الأربعاء</string>
+    <string name="Thursday">الخميس</string>
+    <string name="loding">Loading data.....</string>
+    <string name="Afternoon">Afternoon</string>
+    <string name="Evening">Evening</string>
+    <string name="plz_select_slot">Please select one slot</string>
+    <string name="select_date">Select date</string>
+    <string name="select_time">Select time</string>
+    <string name="doctor_not_found">Doctor not found</string>
+    <string name="search_by_dr">Search by Doctor, Speciality or Location</string>
+    <string name="user_name">User Name</string>
+    <string name="water_intake">Water Intake</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="foot_step">Foot Step Counter</string>
+    <string name="weight_tracker">Weight Tracker</string>
+    <string name="please_set_profile">please set up ur profile details and proceed \\n further for Health Tracker Functionality</string>
+    <string name="bmi_guest">Guest BMI</string>
+    <string name="profile_detail">Profile Detail</string>
+    <string name="dob">Date of Birth</string>
+    <string name="enter_medicine">Enter Medicine Name</string>
+    <string name="select_days_for_reminder">Select days for Reminder</string>
+    <string name="everyday">Everyday</string>
+    <string name="mon">Monday</string>
+    <string name="friday">Friday</string>
+
+</resources>

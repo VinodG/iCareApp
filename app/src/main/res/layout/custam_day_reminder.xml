@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_days_for_reminder"
+        android:textSize="@dimen/text_size_large_22"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_5"
+        android:textColor="@color/text_clr"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvRadioButton"
+       >
+
+    </ListView>
+   <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_15"
+        android:id="@+id/llEveryday">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/select_radio"
+            android:id="@+id/ivEveryday"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvEveryday"
+            android:text="@string/everyday"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:textColor="@color/blue_dark"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llMonday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_15"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivMonday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/unselect_radio" />
+
+        <TextView
+            android:id="@+id/tvMonday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:text="@string/Monday" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_15"
+        android:id="@+id/llTuesday">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/unselect_radio"
+            android:id="@+id/ivTuesday"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTuesday"
+            android:text="@string/Tuesday"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_10"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_15"
+        android:id="@+id/llWednesday">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/unselect_radio"
+            android:id="@+id/ivWednesday"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvWednesday"
+            android:text="@string/Wednesday"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_10"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_15"
+        android:id="@+id/llThursday">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/unselect_radio"
+            android:id="@+id/ivThursday"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvThursday"
+            android:text="@string/Thursday"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_10"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_15"
+        android:id="@+id/llFriday">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/unselect_radio"
+            android:id="@+id/ivFriday"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvFriday"
+            android:text="@string/friday"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_10"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_15"
+        android:id="@+id/llSaturday">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/unselect_radio"
+            android:id="@+id/ivSaturday"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvSaturday"
+            android:text="@string/Saturday"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_10"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_15"
+        android:id="@+id/llSunday">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/unselect_radio"
+            android:id="@+id/ivSunday"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvSunday"
+            android:text="@string/Sunday"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_10"
+            />
+
+    </LinearLayout>-->
+   <!-- <RadioGroup
+        android:id="@+id/radioDays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_15"
+        >
+
+        <RadioButton
+            android:id="@+id/radioEveryday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/everyday"
+            android:checked="true"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:buttonTint="@color/text_clr"/>
+
+        <RadioButton
+            android:id="@+id/radioMonday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Monday"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:buttonTint="@color/text_clr"/>
+
+        <RadioButton
+            android:id="@+id/radioTuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Tuesday"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:buttonTint="@color/text_clr"
+            />
+
+        <RadioButton
+            android:id="@+id/radioWednesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Wednesday"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:buttonTint="@color/text_clr"/>
+
+        <RadioButton
+            android:id="@+id/radioThursday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Thursday"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:buttonTint="@color/text_clr"
+            />
+
+        <RadioButton
+            android:id="@+id/radioFriday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/friday"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:buttonTint="@color/text_clr"/>
+
+        <RadioButton
+            android:id="@+id/radioSaturday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Saturday"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:buttonTint="@color/text_clr"
+            />
+
+        <RadioButton
+            android:id="@+id/radioSunday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Sunday"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:buttonTint="@color/text_clr"/>
+    </RadioGroup>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/margin_2"
+            android:background="@drawable/proceed"
+            android:text="Done"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

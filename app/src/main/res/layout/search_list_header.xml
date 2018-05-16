@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_border"
+    android:gravity="start|center"
+    android:text="header"
+    android:textColor="@color/black"
+    android:clickable="false"
+    android:textSize="@dimen/text_size_medium"
+    android:drawableLeft="@drawable/clinics_small"
+    android:drawablePadding="10dp"
+    android:paddingTop="@dimen/margin_5"
+    android:paddingBottom="@dimen/margin_5">
+</TextView>

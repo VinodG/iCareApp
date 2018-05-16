@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "820071220796",
+    "firebase_url": "https://icareiosapp.firebaseio.com",
+    "project_id": "icareiosapp",
+    "storage_bucket": "icareiosapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820071220796:android:1a69edebb7a4252f",
+        "android_client_info": {
+          "package_name": "com.icare_clinics.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "820071220796-k10144dgu4aprerl4i5h4lrvpj58iqjc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSawO94AYotibAsShtvElK8DQgmBmQz7M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

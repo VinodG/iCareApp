@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/llTop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:focusable="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:text="AUTOMATIC"
+                android:textColor="@color/gray_icare"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".8"
+                    android:text="@string/ml_of_water" />
+
+                <ImageView
+                    android:id="@+id/ivUnSelectAuto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:src="@drawable/unselect_radio" />
+
+                <!--  <ImageView
+                    android:id="@+id/ivSelectAuto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:src="@drawable/select_radio"
+                    android:visibility="gone" />-->
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:text="We will remind you at"
+                android:textColor="@color/gray_icare"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reminder_timings" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sep_profile" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:text="MANUAL"
+                android:textColor="@color/gray_icare"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivUnSelectManual"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@drawable/unselect_radio"
+                android:visibility="visible" />
+
+            <!--   <ImageView
+                android:id="@+id/ivSelectManual"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:src="@drawable/select_radio"
+                android:visibility="gone" />-->
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llManual"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="0.7"
+        android:background="@drawable/rectangle"
+       android:layout_marginTop="@dimen/margin_10"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_marginRight="@dimen/margin_15"
+            android:layout_marginTop="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:text="REMINDER TIMES"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/bntAdd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:text="Add"
+                android:gravity="center"
+                android:padding="@dimen/margin_5"
+                android:background="@color/statusbarred"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+        <GridView
+            android:id="@+id/gridViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:choiceMode="singleChoice"
+            android:clickable="true"
+            android:layout_marginTop="@dimen/margin_10"
+            android:drawSelectorOnTop="false"
+            android:focusable="true"
+            android:gravity="center"
+            android:numColumns="3"
+
+            android:orientation="horizontal"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tvManualReminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reminder_addpopup"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_15"
+                android:visibility="visible"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center|bottom"
+        android:layout_weight="0.3"
+        android:padding="@dimen/margin_15">
+        <Button
+            android:id="@+id/bntSet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SET"
+            android:background="@drawable/afternoon_select"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</LinearLayout>

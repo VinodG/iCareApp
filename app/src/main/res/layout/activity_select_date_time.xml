@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llImage"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/doctor_bg_detail"
+        android:gravity="bottom|center_horizontal">
+        <ImageView
+            android:id="@+id/ivBackImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:src="@drawable/back_arrow" />
+
+        <ImageView
+            android:id="@+id/img_doctor"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/doctorde" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vSeperator"
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_below="@id/llImage"
+        android:background="@color/tab_green" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <include layout="@layout/common_select_date_time"/>
+        </LinearLayout>
+  <!--  <LinearLayout
+        android:id="@+id/bottomConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_10">
+
+        <TextView
+            android:id="@+id/tvConfirmDateTime"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="confirm 8Am" />
+
+        <Button
+            android:id="@+id/btnProceed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/proceed"
+            android:text="proceed"
+            android:textColor="@color/white" />
+    </LinearLayout>-->
+
+  <!--  <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomConfirm"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:layout_below="@+id/llImage">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="@string/select_date"
+                android:textAllCaps="true"
+                android:textSize="@dimen/text_size_small_17" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                app:tabIndicatorColor="@color/green"
+                app:tabMode="scrollable" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_10"
+                android:text="@string/select_time"
+                android:textAllCaps="true"
+                android:textSize="@dimen/text_size_small_17" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/morningTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/morning_select"
+                    android:text="@string/morning"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/afternoonTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/afternoon_unselect"
+                    android:text="@string/Afternoon"
+                    android:textColor="@color/black_light" />
+
+                <Button
+                    android:id="@+id/eveningTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/evening_unselect"
+                    android:text="@string/Evening"
+                    android:textColor="@color/black_light" />
+            </LinearLayout>
+
+            <GridView
+                android:id="@+id/gridViewTime"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/grid_hieght"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:choiceMode="singleChoice"
+                android:clickable="true"
+                android:drawSelectorOnTop="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:numColumns="4"
+                android:orientation="horizontal"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth" />
+        </LinearLayout>
+    </ScrollView>-->
+
+    </ScrollView>
+</LinearLayout>

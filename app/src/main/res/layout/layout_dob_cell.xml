@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="@dimen/margin_5">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etMonth"
+            android:textSize="@dimen/text_size_small_16"
+            android:hint="MM"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etDate"
+            android:textColor="@color/dark_blue2"
+            android:textColorHint="@color/dark_blue2"
+            android:textSize="@dimen/text_size_normal"
+            android:hint="DD" />
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etyear"
+            android:textSize="@dimen/text_size_small_16"
+            android:hint="YY" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_gravity="right"
+            android:text="next"
+            android:id="@+id/dobNext"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_15"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@drawable/nextbtn"/>
+
+</LinearLayout>

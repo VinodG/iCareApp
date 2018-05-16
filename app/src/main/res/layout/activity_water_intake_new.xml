@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_weight="4.5"
+            android:gravity="bottom|center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lltop"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:background="@drawable/water_intake_bg"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="@dimen/margin_3"
+                        android:layout_weight="7.5"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/llTimings"
+                            android:layout_width="@dimen/margin_40"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:id="@+id/rlhumanbody"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:id="@+id/llhumanbody"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/watercolor"
+                                android:orientation="vertical"></LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/body"
+                                android:orientation="vertical"
+                                android:layout_alignBottom="@+id/llhumanbody"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"></LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llSelectTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/small_rect"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="@dimen/margin_5">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="9"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Time Of Intake"
+                                android:textColor="@color/statusbarred" />
+
+                            <TextView
+                                android:id="@+id/tvTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:text="00:00 AM"
+                                android:textColor="@color/statusbarred" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_10"/>
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/go_backword"
+                                android:layout_marginTop="@dimen/margin_15" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvDailyFill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Your Daily fill is\n0%"
+                        android:textColor="@color/statusbarred" />
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:id="@+id/tvConsumedWater"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0 ml"
+                                android:textColor="@color/statusbarred" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Daily"
+                                android:textColor="@color/gray"
+                                android:layout_margin="@dimen/margin_5"/>
+                            <TextView
+                                android:id="@+id/tvTargetWater"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0 ml"
+                                android:textColor="@color/statusbarred" />
+                        </LinearLayout>
+
+                        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                            android:id="@+id/circularProgressbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cpb_background_progressbar_color="@color/gray1"
+                            app:cpb_background_progressbar_width="2dp"
+                            app:cpb_progressbar_color="@color/statusbarred"
+                            app:cpb_progressbar_width="2dp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvViewDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:layout_marginTop="20dp"
+                        android:gravity="right"
+                        android:text="View Details"
+                        android:textColor="@color/statusbarred" />
+
+                    <LinearLayout
+                        android:id="@+id/llReminder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_8"
+                        android:layout_marginTop="20dp"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvYourRemainder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/margin_10"
+                            android:drawableRight="@drawable/pencil"
+                            android:gravity="center"
+                            android:text="Your Reminder" />
+
+                        <TextView
+                            android:id="@+id/tvAutomatic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin_20"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:gravity="center"
+                            android:text="Not set"
+                            android:textColor="@color/statusbarred" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llTarget"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_8"
+                        android:layout_marginTop="20dp"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvYourTarget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/margin_10"
+                            android:drawableRight="@drawable/pencil"
+                            android:gravity="center"
+                            android:text="Your Target" />
+
+                        <TextView
+                            android:id="@+id/tvTarget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin_20"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:gravity="center"
+                            android:text="00 ml"
+                            android:textColor="@color/statusbarred" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/rectangle"
+            android:gravity="center|top" >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Custom"
+                    android:textColor="@color/statusbarred" />
+
+                <EditText
+                    android:id="@+id/etCustom_ml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableBottom="@drawable/line_new"
+                    android:drawablePadding="@dimen/margin_5"
+                    android:gravity="center"
+                    android:hint="00"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:padding="@dimen/margin_10"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_10"
+                    android:text="ml"
+                    android:textColor="@color/statusbarred" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_10"
+                android:background="@drawable/divide_line" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:gravity="center" >
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/lvWaterML"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+            <!--<android.support.v7.widget.RecyclerView
+                android:id="@+id/lvWaterML"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight=".7"
+                android:layout_margin="@dimen/margin_5">
+
+            </android.support.v7.widget.RecyclerView>-->
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.6"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.9"
+            android:gravity="center|top|right"
+            android:layout_marginRight="@dimen/margin_10">
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/waterintake_add"
+                android:text="ADD"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

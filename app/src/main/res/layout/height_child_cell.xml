@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginRight="@dimen/margin_15">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/dark_blue2"
+                android:layout_marginTop="@dimen/margin_5"
+                android:id="@+id/etHeight"
+                android:hint="00"
+                android:inputType="numberDecimal"
+                android:textColorHint="@color/dark_blue2" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/meter"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_gravity="center_vertical"/>
+
+
+        </LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_gravity="right"
+            android:text="next"
+            android:id="@+id/HeightNext"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_15"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@drawable/nextbtn"/>
+
+</LinearLayout>

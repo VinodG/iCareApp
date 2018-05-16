@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="20dp"
+    android:padding="0dp"
+    android:background="@drawable/specialist_bg"
+    android:layout_marginLeft="@dimen/margin_5"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tvfilteredItem"
+        android:gravity="left"
+        android:layout_width="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/text_size_very_small_8"
+        android:layout_weight="0.7"
+        android:maxLength="15"
+        android:textStyle="bold"
+        android:textColor="@color/gray"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="filterItems"/>
+    <ImageView
+        android:id="@+id/ivfiltered_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:padding="@dimen/margin_5"
+        android:src="@drawable/closefrofilter"
+        android:layout_gravity="center_vertical"
+       />
+
+
+</LinearLayout>

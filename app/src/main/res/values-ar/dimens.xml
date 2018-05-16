@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--doctors main activity-->
+
+    <dimen name="tv_doctors_card__medium">15sp</dimen>
+    <dimen name="tv_doctors_card__small">14sp</dimen>
+    <dimen name="margin_60">60dp</dimen>
+</resources>

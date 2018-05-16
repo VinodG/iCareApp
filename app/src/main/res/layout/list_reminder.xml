@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginRight="@dimen/margin_5"
+        android:layout_marginLeft="@dimen/margin_5"
+        android:layout_marginTop="@dimen/margin_5">
+        <com.daimajia.swipe.SwipeLayout xmlns:swipe="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            swipe:leftEdgeSwipeOffset="0dp"
+            swipe:rightEdgeSwipeOffset="0dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#FF5534"
+                android:gravity="center"
+                android:id="@+id/llDelete"
+                android:tag="Bottom3"
+                android:weightSum="10">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvDelete"
+                    android:text="   Delete   "
+                    android:textColor="#fff"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llReminderItem"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivSelecttedTablets"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:src="@drawable/select_tablets" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivunSelecttedCapsules"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:src="@drawable/select_capsules"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivunSelecttedDroplets"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:src="@drawable/select_droplet"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:id="@+id/ivunSelecttedInjection"
+            android:src="@drawable/select_injection"
+            />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/llReminder">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/medicine_name"
+            android:id="@+id/tvMedicineName"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:id="@+id/menuItem"
+            android:layout_marginRight="@dimen/margin_10"
+            android:background="@drawable/menu_item"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numberOfCapsules"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:text="3 capsules"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numberOfDays"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:text=""
+        android:layout_marginBottom="@dimen/margin_5"/>
+    </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTiming"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:text="8:00 am"
+            android:layout_marginBottom="@dimen/margin_5"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/margin_5"
+        android:layout_marginTop="@dimen/margin_5"
+        android:background="@color/light_hint"/>
+
+
+    </LinearLayout>
+
+
+        </com.daimajia.swipe.SwipeLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

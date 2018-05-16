@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="false"
+    android:id="@+id/llTarget"
+    android:background="@color/white"
+    tools:context=".SetTargetActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="DAILY TARGET(ml)"
+                    android:textColor="@color/gray_drak"
+                    android:textSize="@dimen/text_size_small"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/ivSelectDailyTarget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:src="@drawable/select_radio"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/ivUnSelectDailyTarget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:src="@drawable/unselect_radio"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etDailyTarget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:enabled="false"
+                android:hint="00"
+                android:text="1888"
+                android:textColor="@color/gray_drak"
+                android:inputType="numberDecimal"
+                android:maxLength="4"
+                android:singleLine="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/light_hint" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="WEEKLY TARGET(L)"
+                    android:textColor="@color/gray_drak"
+                    android:textSize="@dimen/text_size_small"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/ivUnSelectWeeklyTarget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:padding="@dimen/margin_5"
+                    android:src="@drawable/unselect_radio"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/ivSelectWeeklyTarget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:padding="@dimen/margin_5"
+                    android:src="@drawable/select_radio"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etWeeklyTarget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:enabled="false"
+                android:maxLength="4"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:hint="00" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/light_hint" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="MONTHLY TARGET(L)"
+                    android:textColor="@color/gray_drak"
+                    android:textSize="@dimen/text_size_small"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/ivUnSelectMonthlyTarget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:padding="@dimen/margin_5"
+                    android:src="@drawable/unselect_radio"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/ivSelectMonthTarget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:padding="@dimen/margin_5"
+                    android:src="@drawable/select_radio"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etMonthlyTarget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:enabled="false"
+                android:maxLength="4"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:hint="00" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/light_hint" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="RECOMMENDED TARGET"
+                    android:textColor="@color/gray_drak"
+                    android:textSize="@dimen/text_size_small"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/ivInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/info"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin_30"/>
+
+                <ImageView
+                    android:id="@+id/ivUnSelectRecomTarget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:padding="@dimen/margin_5"
+                    android:src="@drawable/unselect_radio"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/ivSelectRecomTarget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:padding="@dimen/margin_5"
+                    android:src="@drawable/select_radio"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvRecom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8 x 8" />
+
+            <TextView
+                android:id="@+id/tvRecomOunces"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8 Ounces(236 ML)" />
+
+            <TextView
+                android:id="@+id/tvRecomTimes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8 times a day" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/light_hint" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|bottom"
+        android:padding="@dimen/margin_15">
+        <Button
+            android:id="@+id/bntSet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SET"
+            android:background="@drawable/afternoon_select"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</LinearLayout>
